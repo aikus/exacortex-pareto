@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  npm:
+    build:
+      context: ./docker/node
+    volumes:
+      - .:/pareto
+    container_name: pareto-npm
+
+  nginx:
+    build:
+      context: ./docker/nginx
+    volumes:
+      - .:/pareto
+      - ./var/log:/var/log/nginx/
+    container_name: pareto-nginx
+    #    restart: always
+    depends_on:
+      - npm
+    ports:
+      - "80:80"
+
+volumes:
+  ###> doctrine/doctrine-bundle ###
+  database:
+###< doctrine/doctrine-bundle ###

@@ -1,12 +1,11 @@
-import {Table, Typography} from "@mui/material";
+import {Table, TableContainer, Typography} from "@mui/material";
 import Caption from "./Caption";
 import Body from "./Body";
 import Footer from "./Footer";
 import React from "react";
-import PartContainer from "../markup/PartContainer";
 
 export default function MainTable() {
-    return <PartContainer>
+    return <TableContainer>
             <Typography
                 component={"h2"}
                 variant={"h3"}>Данные</Typography>
@@ -15,5 +14,5 @@ export default function MainTable() {
                 <Body/>
                 <Footer/>
             </Table>
-    </PartContainer>
+    </TableContainer>
 }
