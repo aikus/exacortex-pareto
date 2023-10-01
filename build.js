@@ -7,5 +7,5 @@ const {execSync} = require('child_process'),
 
 
 runCommand("npm i")
-runCommand("npm update")
+runCommand("npm cache clean --force")
 runCommand("npm run build")
