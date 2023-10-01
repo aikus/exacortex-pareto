@@ -1,8 +1,8 @@
 const {execSync} = require('child_process'),
     runCommand = command => {
-        console.log(command + "...")
+        console.log(command, "...")
         execSync(command)
-        console.log("done")
+        console.log(command, "done")
     }
 
 
