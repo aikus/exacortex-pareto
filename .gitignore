@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea
+/docker/nginx/cert.pem
+/docker/nginx/private.key
