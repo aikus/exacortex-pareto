@@ -1,4 +1,10 @@
-const {execSync} = require('child_process')
+const {execSync} = require('child_process'),
+    runCommand = command => {
+        console.log(command + "...")
+        execSync(command)
+        console.log("done")
+    }
 
-execSync("npm i")
-execSync("npm run build")
+
+runCommand("npm i")
+runCommand("npm run build")
